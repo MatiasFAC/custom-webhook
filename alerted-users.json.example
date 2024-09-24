@@ -1,0 +1,23 @@
+{
+    "list": [
+        {"name": "user1", "phone": "+5622233451"},
+        {"name": "user2", "phone": "+5622233452"},
+        {"name": "user3", "phone": "+5622233453"}
+        
+    ],
+    "custom1": [
+        {"name": "usr_c1", "phone": "+456799983"},
+        {"name": "usr_c2", "phone": "+456799984"},
+        {"name": "usr_c3", "phone": "+456799985"}
+    ],
+    "managers": [
+        {"name": "manager1", "phone": "+5622233454"},
+        {"name": "manager2", "phone": "+5622233455"},
+        {"name": "manager3", "phone": "+5622233456"}
+    ],
+    "developers": [
+        {"name": "dev1", "phone": "+5622233457"},
+        {"name": "dev2", "phone": "+5622233458"},
+        {"name": "dev3", "phone": "+5622233459"}
+    ]
+}
