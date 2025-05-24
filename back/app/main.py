@@ -6,13 +6,13 @@ from loguru import logger
 import requests
 from requests.auth import HTTPBasicAuth
 from pydantic import BaseModel
+from logic.config import ENV, ALERTED_USERS_FILE, ENDPOINT_BOT_WS, ENDPOINT_BOT_WS_BASIC_AUTH_USR, ENDPOINT_BOT_WS_BASIC_AUTH_PWD, SECURITY_TOKEN
 
-env = os.environ.get("ENV", "prod")
-alerted_users_file = os.getenv("ALERTED_USERS_FILE", "alerted-users.json")
-endpoint_bot_ws = os.getenv("ENDPOINT_BOT_WS", "http://localhost:3008/v1/messages")
-endpoint_bot_ws_basic_auth_usr = os.getenv("ENDPOINT_BOT_WS_BASIC_AUTH_USR", "")
-endpoint_bot_ws_basic_auth_pwd = os.getenv("ENDPOINT_BOT_WS_BASIC_AUTH_PWD", "")
-SECURITY_TOKEN = os.getenv("SECURITY_TOKEN", "tu_token_de_seguridad")
+env = ENV
+alerted_users_file = ALERTED_USERS_FILE
+endpoint_bot_ws = ENDPOINT_BOT_WS
+endpoint_bot_ws_basic_auth_usr = ENDPOINT_BOT_WS_BASIC_AUTH_USR
+endpoint_bot_ws_basic_auth_pwd = ENDPOINT_BOT_WS_BASIC_AUTH_PWD
 
 enable_endpoint_bot_ws_basic_auth: bool = len(endpoint_bot_ws_basic_auth_usr) > 0 and len(endpoint_bot_ws_basic_auth_pwd) > 0
 
@@ -47,7 +47,9 @@ class Event(BaseModel):
 
 @app.post("/events/")
 async def receive_event(event: Event, authorization: str = Header(...), list2use: str = Header(None)):
-    # print headers
+    logger.info(f"----------")
+    logger.info(event.msg)
+    logger.info(f"----------")
     if env == 'dev':
         logger.warning(f"Authorization:    {authorization}")
         logger.warning(f"List to use:      {list2use}")

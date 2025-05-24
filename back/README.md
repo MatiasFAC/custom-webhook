@@ -6,7 +6,7 @@ This project implements an intermediary service for Uptime Kuma that helps preve
 
 ## Usage
 
-The service is designed to receive structured events, validate authorization, and send messages to a previously configured list of users. It can be deployed in either development (dev) or production (prod) environments, adjusting its configuration based on the defined environment variables.
+The service is designed to receive structured events, validate authorization, and send messages to a previously configured list of users. It can be deployed in either development (dev) or production (prod) environments, adjusting its configuration based on the defined settings in the `config.json` file.
 
 ### Workflow
 
@@ -15,11 +15,24 @@ The service is designed to receive structured events, validate authorization, an
 3. **Event Processing**: It extracts the relevant event information and formats it for delivery.
 4. **Notification Delivery**: It sends messages to the alerted users via the configured WebSocket endpoint.
 
-## Environment Variables
+## Configuration with `config.json`
 
-The service can be configured using the following environment variables:
+The service is configured using a `config.json` file located in the project directory. This file contains all the necessary settings for the service to run.
 
-| Variable | Description | Valor por Default Value |
+### Example `config.json`
+
+```json
+{
+    "ENV": "prod",
+    "ALERTED_USERS_FILE": "alerted-users.json",
+    "ENDPOINT_BOT_WS": "http://localhost:3008/v1/messages",
+    "ENDPOINT_BOT_WS_BASIC_AUTH_USR": "",
+    "ENDPOINT_BOT_WS_BASIC_AUTH_PWD": "",
+    "SECURITY_TOKEN": "tu_token_de_seguridad"
+}
+```
+
+| Key | Description | Default Value |
 |-|-|-|
 | `ENV` | Defines the service's execution environment. Can be `dev` for development or `prod` for production. | `prod` |
 | `ALERTED_USERS_FILE` | Path to the JSON file containing the list of alerted users. | `alerted-users.json` |
@@ -28,7 +41,7 @@ The service can be configured using the following environment variables:
 | `ENDPOINT_BOT_WS_BASIC_AUTH_PWD` | Password for basic authentication at the WebSocket endpoint (if applicable). | `""` (empty) |
 | `SECURITY_TOKEN` | Security token used to authenticate requests to the `/events/` endpoint. | `tu_token_de_seguridad` |
 
-> **Note:** The environment variables related to basic authentication (`ENDPOINT_BOT_WS_BASIC_AUTH_USR` and `ENDPOINT_BOT_WS_BASIC_AUTH_PWD`) are optional. If not provided, the service will send notifications without authentication.
+> **Note:** The authentication fields (`ENDPOINT_BOT_WS_BASIC_AUTH_USR` and `ENDPOINT_BOT_WS_BASIC_AUTH_PWD`) are optional. If not provided, the service will send notifications without authentication.
 
 ## Structure of `alerted-users.json`
 

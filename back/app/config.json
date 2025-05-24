@@ -1,0 +1,8 @@
+{
+    "ENV": "dev",
+    "ALERTED_USERS_FILE": "../alerted-users.json",
+    "ENDPOINT_BOT_WS": "https://wspbot.m-a.dev/v1/messages",
+    "ENDPOINT_BOT_WS_BASIC_AUTH_USR": "matias.araya",
+    "ENDPOINT_BOT_WS_BASIC_AUTH_PWD": "40lRvfVC3MVvj9VWPoI1z2l77vWnJmmwj4Lk57h9xYMOvfxUBU",
+    "SECURITY_TOKEN": "IP83Kt2gJYo6z5u7rIGkrAnd7HHvldtb5KcVSsn8sAHYAKspxp"
+}
