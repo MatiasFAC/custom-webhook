@@ -1,0 +1,9 @@
+{
+  "apiKey": "your-secure-api-key-here",
+  "hooksFilePath": "./alerted-users.json",
+  "schemaFilePath": "./schema.json",
+  "logFilePath": "./logs/app.log",
+  "logMaxSizeMB": 50,
+  "dev": true,
+  "cors": ["http://localhost:8000", "http://localhost:28000"]
+}

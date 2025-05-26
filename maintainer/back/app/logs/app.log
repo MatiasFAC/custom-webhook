@@ -1,0 +1,12 @@
+2025-05-26T01:12:22.442771+0000 INFO Operation: READ, Data: {"list": [{"name": "Matias Araya", "phone": "+56950997093"}], "gerencia": [], "lideresdev": [], "syt": []}
+2025-05-26T01:12:31.623905+0000 INFO Operation: READ, Data: {"list": [{"name": "Matias Araya", "phone": "+56950997093"}], "gerencia": [], "lideresdev": [], "syt": []}
+2025-05-26T01:13:14.730650+0000 INFO Operation: WRITE, Data: {"list": [{"name": "Matias Araya", "phone": "+56950997093"}], "gerencia": [{"name": "string", "phone": "+56944586951"}], "lideresdev": [], "syt": []}
+2025-05-26T02:44:01.642134+0000 INFO Operation: READ, Data: {"list": [{"name": "Matias Araya", "phone": "+56950997093"}], "gerencia": [{"name": "string", "phone": "+56944586951"}], "lideresdev": [], "syt": []}
+2025-05-26T02:44:07.205811+0000 INFO Operation: WRITE, Data: {"list": [{"name": "Matias Araya", "phone": "+56950997093"}], "gerencia": [{"name": "string", "phone": "+56944586951"}], "lideresdev": [], "syt": []}
+2025-05-26T02:51:53.866829+0000 INFO Operation: READ, Data: {"list": [{"name": "Matias Araya", "phone": "+56950997093"}], "gerencia": [{"name": "string", "phone": "+56944586951"}], "lideresdev": [], "syt": []}
+2025-05-26T02:54:22.750354+0000 INFO Operation: WRITE, Data: {"list": [{"name": "Matias Araya", "phone": "+56950997093"}], "gerencia": [], "lideresdev": [], "syt": []}
+2025-05-26T02:54:27.167187+0000 INFO Operation: READ, Data: {"list": [{"name": "Matias Araya", "phone": "+56950997093"}], "gerencia": [], "lideresdev": [], "syt": []}
+2025-05-26T02:54:52.335325+0000 INFO Operation: WRITE, Data: {"list": [{"name": "Matias Araya", "phone": "+56950997093"}], "gerencia": [{"name": "Matias Araya", "phone": "+56950997093"}], "lideresdev": [{"name": "Matias Araya", "phone": "+56950997093"}], "syt": []}
+2025-05-26T02:54:54.905551+0000 INFO Operation: READ, Data: {"list": [{"name": "Matias Araya", "phone": "+56950997093"}], "gerencia": [{"name": "Matias Araya", "phone": "+56950997093"}], "lideresdev": [{"name": "Matias Araya", "phone": "+56950997093"}], "syt": []}
+2025-05-26T02:55:18.424877+0000 INFO Operation: WRITE, Data: {"list": [{"name": "Matias Araya", "phone": "+56950997093"}], "gerencia": [], "lideresdev": [], "syt": []}
+2025-05-26T02:55:23.015373+0000 INFO Operation: READ, Data: {"list": [{"name": "Matias Araya", "phone": "+56950997093"}], "gerencia": [], "lideresdev": [], "syt": []}

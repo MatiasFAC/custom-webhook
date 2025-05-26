@@ -1,0 +1,10 @@
+services:
+  manteiner-back:
+    build:
+      context: maintainer/back/
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./maintainer/back/:/app
+    ports:
+      - "28000:8000"
+    command: ["tail", "-f", "/dev/null"]
